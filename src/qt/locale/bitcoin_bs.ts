@@ -9,14 +9,14 @@
     <name>AskPassphraseDialog</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VeriCoinGUI</name>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>VeriCoin</source>
+        <translation>VeriCoin</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Jezrga</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Jezrga</translation>
     </message>
     </context>
 <context>
@@ -34,15 +34,15 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Jezrga</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Jezrga</translation>
     </message>
     </context>
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Jezrga</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Jezrga</translation>
     </message>
     </context>
 <context>
@@ -109,8 +109,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Jezrga</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Jezrga</translation>
     </message>
     </context>
 <context>

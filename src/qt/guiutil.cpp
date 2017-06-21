@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2013 The Bitcoin Core developers
+// Copyright (c) 2011-2013 The VeriCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -107,10 +107,10 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Bitcoin address (e.g. %1)").arg("1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L"));
+    widget->setPlaceholderText(QObject::tr("Enter a VeriCoin address (e.g. %1)").arg("B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i"));
 #endif
-    widget->setValidator(new BitcoinAddressEntryValidator(parent));
-    widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
+    widget->setValidator(new VeriCoinAddressEntryValidator(parent));
+    widget->setCheckValidator(new VeriCoinAddressCheckValidator(parent));
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -122,7 +122,7 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseVeriCoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
     if(!uri.isValid() || uri.scheme() != QString("bitcoin"))
@@ -165,7 +165,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!BitcoinUnits::parse(BitcoinUnits::BTC, i->second, &rv.amount))
+                if(!VeriCoinUnits::parse(VeriCoinUnits::BTC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -183,7 +183,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
+bool parseVeriCoinURI(QString uri, SendCoinsRecipient *out)
 {
     // Convert bitcoin:// to bitcoin:
     //
@@ -194,17 +194,17 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
         uri.replace(0, 10, "bitcoin:");
     }
     QUrl uriInstance(uri);
-    return parseBitcoinURI(uriInstance, out);
+    return parseVeriCoinURI(uriInstance, out);
 }
 
-QString formatBitcoinURI(const SendCoinsRecipient &info)
+QString formatVeriCoinURI(const SendCoinsRecipient &info)
 {
     QString ret = QString("bitcoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::BTC, info.amount, false, BitcoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(VeriCoinUnits::format(VeriCoinUnits::BTC, info.amount, false, VeriCoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -227,7 +227,7 @@ QString formatBitcoinURI(const SendCoinsRecipient &info)
 
 bool isDust(const QString& address, const CAmount& amount)
 {
-    CTxDestination dest = CBitcoinAddress(address.toStdString()).Get();
+    CTxDestination dest = CVeriCoinAddress(address.toStdString()).Get();
     CScript script = GetScriptForDestination(dest);
     CTxOut txOut(amount, script);
     return txOut.IsDust(::minRelayTxFee);
@@ -569,16 +569,16 @@ TableViewLastColumnResizingFixer::TableViewLastColumnResizingFixer(QTableView* t
 boost::filesystem::path static StartupShortcutPath()
 {
     if (GetBoolArg("-testnet", false))
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Bitcoin (testnet).lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "VeriCoin (testnet).lnk";
     else if (GetBoolArg("-regtest", false))
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Bitcoin (regtest).lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "VeriCoin (regtest).lnk";
 
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Bitcoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "VeriCoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for Bitcoin*.lnk
+    // check for VeriCoin*.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -710,11 +710,11 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (GetBoolArg("-testnet", false))
-            optionFile << "Name=Bitcoin (testnet)\n";
+            optionFile << "Name=VeriCoin (testnet)\n";
         else if (GetBoolArg("-regtest", false))
-            optionFile << "Name=Bitcoin (regtest)\n";
+            optionFile << "Name=VeriCoin (regtest)\n";
         else
-            optionFile << "Name=Bitcoin\n";
+            optionFile << "Name=VeriCoin\n";
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", GetBoolArg("-testnet", false), GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

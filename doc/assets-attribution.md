@@ -29,7 +29,7 @@ Jonas Schnelli
 
 ### Info
 * Designer: Jonas Schnelli
-* Bitcoin Icon: (based on the original bitcoin logo from Bitboy)
+* VeriCoin Icon: (based on the original bitcoin logo from Bitboy)
 * Some icons are based on Stephan Hutchings Typicons
 * License: MIT
 

@@ -60,7 +60,7 @@ Release Process
 
   Only missing files will be fetched, so this is safe to re-run for each build.
 
-###Build Bitcoin Core for Linux, Windows, and OS X:
+###Build VeriCoin Core for Linux, Windows, and OS X:
 
 	./bin/gbuild --commit bitcoin=v${VERSION} ../bitcoin/contrib/gitian-descriptors/gitian-linux.yml
 	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../bitcoin/contrib/gitian-descriptors/gitian-linux.yml
@@ -142,14 +142,14 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
 - Update bitcoin.org version
 
-  - First, check to see if the Bitcoin.org maintainers have prepared a
+  - First, check to see if the VeriCoin.org maintainers have prepared a
     release: https://github.com/bitcoin/bitcoin.org/labels/Releases
 
       - If they have, it will have previously failed their Travis CI
         checks because the final release files weren't uploaded.
         Trigger a Travis CI rebuild---if it passes, merge.
 
-  - If they have not prepared a release, follow the Bitcoin.org release
+  - If they have not prepared a release, follow the VeriCoin.org release
     instructions: https://github.com/bitcoin/bitcoin.org#release-notes
 
   - After the pull request is merged, the website will automatically show the newest version within 15 minutes, as well
@@ -159,11 +159,11 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - Release sticky on bitcointalk: https://bitcointalk.org/index.php?board=1.0
 
-  - Bitcoin-development mailing list
+  - VeriCoin-development mailing list
 
   - Update title of #bitcoin on Freenode IRC
 
-  - Optionally reddit /r/Bitcoin, ... but this will usually sort out itself
+  - Optionally reddit /r/VeriCoin, ... but this will usually sort out itself
 
 - Notify BlueMatt so that he can start building [https://launchpad.net/~bitcoin/+archive/ubuntu/bitcoin](the PPAs)
 

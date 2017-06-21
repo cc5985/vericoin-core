@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin Core developers
+// Copyright (c) 2009-2014 The VeriCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,6 +8,7 @@
 
 #include "serialize.h"
 
+#include <limits>
 #include <stdlib.h>
 #include <string>
 
@@ -17,7 +18,7 @@ static const CAmount COIN = 100000000;
 static const CAmount CENT = 1000000;
 
 /** No amount larger than this (in satoshi) is valid */
-static const CAmount MAX_MONEY = 21000000 * COIN;
+static const CAmount MAX_MONEY = std::numeric_limits<int64_t>::max();
 inline bool MoneyRange(const CAmount& nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 
 /** Type-safe wrapper class to for fee rates

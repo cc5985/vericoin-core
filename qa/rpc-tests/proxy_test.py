@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-# Copyright (c) 2015 The Bitcoin Core developers
+# Copyright (c) 2015 The VeriCoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 import socket
@@ -8,7 +8,7 @@ from binascii import hexlify
 import time, os
 
 from test_framework.socks5 import Socks5Configuration, Socks5Command, Socks5Server, AddressType
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import VeriCoinTestFramework
 from test_framework.util import *
 '''
 Test plan:
@@ -34,7 +34,7 @@ addnode connect to onion
 addnode connect to generic DNS name
 '''
 
-class ProxyTest(BitcoinTestFramework):        
+class ProxyTest(VeriCoinTestFramework):        
     def __init__(self):
         # Create two proxies on different ports
         # ... one unauthenticated

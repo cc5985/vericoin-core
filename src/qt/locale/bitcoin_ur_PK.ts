@@ -109,7 +109,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VeriCoinGUI</name>
     <message>
         <source>Error</source>
         <translation>نقص</translation>

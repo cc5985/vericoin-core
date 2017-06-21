@@ -1,9 +1,9 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Bitcoin
-Comment=Bitcoin P2P Cryptocurrency
-Comment[fr]=Bitcoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Bitcoin, eşten eşe kriptografik sanal para birimi
+Name=VeriCoin
+Comment=VeriCoin P2P Cryptocurrency
+Comment[fr]=VeriCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=VeriCoin, eşten eşe kriptografik sanal para birimi
 Exec=bitcoin-qt %u
 Terminal=false
 Type=Application

@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin Core developers
+// Copyright (c) 2009-2014 The VeriCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -572,7 +572,7 @@ public:
     }
 
     /**
-     * Pre-version-0.6, Bitcoin always counted CHECKMULTISIGs
+     * Pre-version-0.6, VeriCoin always counted CHECKMULTISIGs
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form
@@ -590,16 +590,6 @@ public:
 
     /** Called by IsStandardTx and P2SH/BIP62 VerifyScript (which makes it consensus-critical). */
     bool IsPushOnly() const;
-
-    /**
-     * Returns whether the script is guaranteed to fail at execution,
-     * regardless of the initial stack. This allows outputs to be pruned
-     * instantly when entering the UTXO set.
-     */
-    bool IsUnspendable() const
-    {
-        return (size() > 0 && *begin() == OP_RETURN);
-    }
 
     std::string ToString() const;
     void clear()

@@ -62,12 +62,12 @@
         <translation>Recibiendo direcciones</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones de Bitcoin para enviar pagos. Siempre revise la cantidad y la dirección receptora antes de enviar monedas</translation>
+        <source>These are your VeriCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones de VeriCoin para enviar pagos. Siempre revise la cantidad y la dirección receptora antes de enviar monedas</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones Bitcoin para recibir pagos. Es recomendado usar una nueva dirección receptora para cada transacción.</translation>
+        <source>These are your VeriCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones VeriCoin para recibir pagos. Es recomendado usar una nueva dirección receptora para cada transacción.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -193,7 +193,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VeriCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Sign &amp;mensaje</translation>
@@ -275,8 +275,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar monedas a una dirección Bitcoin</translation>
+        <source>Send coins to a VeriCoin address</source>
+        <translation>Enviar monedas a una dirección VeriCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -315,16 +315,16 @@
         <translation>Pestañas</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>nucleo Bitcoin</translation>
+        <source>VeriCoin Core</source>
+        <translation>nucleo VeriCoin</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>opciones de la &amp;Linea de comandos</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Mostrar mensaje de ayuda del nucleo de Bitcoin para optener una lista con los posibles comandos  de Bitcoin</translation>
+        <source>Show the VeriCoin Core help message to get a list with possible VeriCoin command-line options</source>
+        <translation>Mostrar mensaje de ayuda del nucleo de VeriCoin para optener una lista con los posibles comandos  de VeriCoin</translation>
     </message>
     <message>
         <source>Up to date</source>
@@ -474,8 +474,8 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>nucleo Bitcoin</translation>
+        <source>VeriCoin Core</source>
+        <translation>nucleo VeriCoin</translation>
     </message>
     <message>
         <source>version</source>
@@ -486,8 +486,8 @@
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Acerca de Bitcoin Core</translation>
+        <source>About VeriCoin Core</source>
+        <translation>Acerca de VeriCoin Core</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -501,8 +501,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>nucleo Bitcoin</translation>
+        <source>VeriCoin Core</source>
+        <translation>nucleo VeriCoin</translation>
     </message>
     </context>
 <context>
@@ -552,8 +552,8 @@
         <translation>&amp;Etiqueta</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the VeriCoin network.</source>
+        <translation>Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de VeriCoin.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -689,8 +689,8 @@
         <translation>¡La transación fue rechazada! Esto puede ocurrir si algunas de tus monedas en tu cartera han sido gastadas, al igual que si usas una cartera copiada y la monedas fueron gastadas en la copia pero no se marcaron como gastadas.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation>Advertencia: Dirección de Bitcoin invalida</translation>
+        <source>Warning: Invalid VeriCoin address</source>
+        <translation>Advertencia: Dirección de VeriCoin invalida</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -751,8 +751,8 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>Apagando el nucleo de Bitcoin...</translation>
+        <source>VeriCoin Core is shutting down...</source>
+        <translation>Apagando el nucleo de VeriCoin...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -777,12 +777,12 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>nucleo Bitcoin</translation>
+        <source>VeriCoin Core</source>
+        <translation>nucleo VeriCoin</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Los desarrolladores de Bitcoin Core</translation>
+        <source>The VeriCoin Core developers</source>
+        <translation>Los desarrolladores de VeriCoin Core</translation>
     </message>
     </context>
 <context>

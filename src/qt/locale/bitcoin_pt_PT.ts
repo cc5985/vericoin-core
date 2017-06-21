@@ -66,12 +66,12 @@
         <translation>Endereços de depósito</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estes são os seus endereços Bitcoin para enviar pagamentos. Verifique sempre o valor e o endereço de envio antes de enviar moedas.</translation>
+        <source>These are your VeriCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estes são os seus endereços VeriCoin para enviar pagamentos. Verifique sempre o valor e o endereço de envio antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estes são os seus endereços Bitcoin para receber pagamentos. É recomendado que utilize um endereço novo para cada transacção.</translation>
+        <source>These are your VeriCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estes são os seus endereços VeriCoin para receber pagamentos. É recomendado que utilize um endereço novo para cada transacção.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -168,8 +168,8 @@
         <translation>Tem a certeza que deseja encriptar a carteira?</translation>
     </message>
     <message>
-        <source>Bitcoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>O cliente Bitcoin Core irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus bitcoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
+        <source>VeriCoin Core will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <translation>O cliente VeriCoin Core irá agora ser fechado para terminar o processo de encriptação. Recorde que a encriptação da sua carteira não protegerá totalmente os seus bitcoins de serem roubados por programas maliciosos que infectem o seu computador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -221,7 +221,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>VeriCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Assinar &amp;mensagem...</translation>
@@ -295,8 +295,8 @@
         <translation>Abrir &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Cliente Bitcoin Core</translation>
+        <source>VeriCoin Core client</source>
+        <translation>Cliente VeriCoin Core</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -307,7 +307,7 @@
         <translation>A reindexar blocos no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a VeriCoin address</source>
         <translation>Enviar moedas para um endereço bitcoin</translation>
     </message>
     <message>
@@ -331,8 +331,8 @@
         <translation>&amp;Verificar mensagem...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>VeriCoin</source>
+        <translation>VeriCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -347,8 +347,8 @@
         <translation>&amp;Receber</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Mostrar informação sobre Bitcoin Core</translation>
+        <source>Show information about VeriCoin Core</source>
+        <translation>Mostrar informação sobre VeriCoin Core</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -363,12 +363,12 @@
         <translation>Encriptar as chaves privadas que pertencem à sua carteira</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Assine mensagens com os seus endereços Bitcoin para provar que os controla</translation>
+        <source>Sign messages with your VeriCoin addresses to prove you own them</source>
+        <translation>Assine mensagens com os seus endereços VeriCoin para provar que os controla</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verifique mensagens para assegurar que foram assinadas com o endereço Bitcoin especificado</translation>
+        <source>Verify messages to ensure they were signed with specified VeriCoin addresses</source>
+        <translation>Verifique mensagens para assegurar que foram assinadas com o endereço VeriCoin especificado</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -387,20 +387,20 @@
         <translation>Barra de separadores</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Core</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation>Solicitar pagamentos (gera códigos QR e URIs bitcoin:)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Sobre o Bitcoin Core</translation>
+        <source>&amp;About VeriCoin Core</source>
+        <translation>&amp;Sobre o VeriCoin Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin Core</source>
-        <translation>Modificar opções de configuração de Bitcoin Core</translation>
+        <source>Modify configuration options for VeriCoin Core</source>
+        <translation>Modificar opções de configuração de VeriCoin Core</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -419,12 +419,12 @@
         <translation>&amp;Opções da linha de &amp;comandos</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Mostrar a mensagem de ajuda do Bitcoin Core para obter uma lista com possíveis opções de linha de comandos</translation>
+        <source>Show the VeriCoin Core help message to get a list with possible VeriCoin command-line options</source>
+        <translation>Mostrar a mensagem de ajuda do VeriCoin Core para obter uma lista com possíveis opções de linha de comandos</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n ligação ativa à rede Bitcoin</numerusform><numerusform>%n ligações ativas à rede Bitcoin</numerusform></translation>
+        <source>%n active connection(s) to VeriCoin network</source>
+        <translation><numerusform>%n ligação ativa à rede VeriCoin</numerusform><numerusform>%n ligações ativas à rede VeriCoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -806,7 +806,7 @@
         <translation>O endereço introduzido "%1" já se encontra no livro de endereços.</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
+        <source>The entered address "%1" is not a valid VeriCoin address.</source>
         <translation>O endereço introduzido "%1" não é um endereço bitcoin válido.</translation>
     </message>
     <message>
@@ -844,8 +844,8 @@
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Core</translation>
     </message>
     <message>
         <source>version</source>
@@ -856,8 +856,8 @@
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>Sobre o Bitcoin Core</translation>
+        <source>About VeriCoin Core</source>
+        <translation>Sobre o VeriCoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -879,16 +879,16 @@
         <translation>Bem-vindo</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Bem-vindo ao Bitcoin Core.</translation>
+        <source>Welcome to VeriCoin Core.</source>
+        <translation>Bem-vindo ao VeriCoin Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Sendo esta a primeira vez que o programa é iniciado, poderá escolher onde o Bitcoin Core irá guardar os seus dados.</translation>
+        <source>As this is the first time the program is launched, you can choose where VeriCoin Core will store its data.</source>
+        <translation>Sendo esta a primeira vez que o programa é iniciado, poderá escolher onde o VeriCoin Core irá guardar os seus dados.</translation>
     </message>
     <message>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>O Bitcoin Core vai transferir e armazenar uma cópia do "block chain" (cadeia de blocos). Pelo menos %1GB de dados serão armazenados nesta pasta, e vão crescer ao longo do tempo. A sua carteira também irá ser armazenada nesta pasta.</translation>
+        <source>VeriCoin Core will download and store a copy of the VeriCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>O VeriCoin Core vai transferir e armazenar uma cópia do "block chain" (cadeia de blocos). Pelo menos %1GB de dados serão armazenados nesta pasta, e vão crescer ao longo do tempo. A sua carteira também irá ser armazenada nesta pasta.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -899,8 +899,8 @@
         <translation>Utilizar uma pasta de dados personalizada:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -981,8 +981,8 @@
         <translation>Minimize ao invés de sair da aplicação quando a janela é fechada. Com esta  opção selecionada, a aplicação apenas será encerrada quando escolher Sair da aplicação no menú.</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin Core.</source>
-        <translation>A linguagem da interface do utilizador pode ser definida aqui. Esta definição entrará em efeito após reiniciar o Bitcoin Core.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting VeriCoin Core.</source>
+        <translation>A linguagem da interface do utilizador pode ser definida aqui. Esta definição entrará em efeito após reiniciar o VeriCoin Core.</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1010,12 +1010,12 @@
         <translation>&amp;Rede</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin Core after logging in to the system.</source>
-        <translation>Começar o Bitcoin Core automaticamente ao iniciar sessão no sistema.</translation>
+        <source>Automatically start VeriCoin Core after logging in to the system.</source>
+        <translation>Começar o VeriCoin Core automaticamente ao iniciar sessão no sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin Core on system login</source>
-        <translation>&amp;Começar o Bitcoin Core ao iniciar o sistema</translation>
+        <source>&amp;Start VeriCoin Core on system login</source>
+        <translation>&amp;Começar o VeriCoin Core ao iniciar o sistema</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -1042,7 +1042,7 @@
         <translation>&amp;Gastar troco não confirmado</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the VeriCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Abrir a porta do cliente bitcoin automaticamente no seu router. Isto apenas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
     </message>
     <message>
@@ -1050,8 +1050,8 @@
         <translation>Mapear porta usando &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation>Conectar à rede da Bitcoin através dum proxy SOCLS5.</translation>
+        <source>Connect to the VeriCoin network through a SOCKS5 proxy.</source>
+        <translation>Conectar à rede da VeriCoin através dum proxy SOCLS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1149,8 +1149,8 @@
         <translation>Formulário</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A informação mostrada poderá estar desatualizada. A sua carteira sincroniza automaticamente com a rede Bitcoin depois de estabelecer ligação, mas este processo ainda não está completo.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the VeriCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>A informação mostrada poderá estar desatualizada. A sua carteira sincroniza automaticamente com a rede VeriCoin depois de estabelecer ligação, mas este processo ainda não está completo.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1256,8 +1256,8 @@
         <translation>O URL de pedido de pagamento é inválido: %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI não foi lido correctamente! Isto pode ser causado por um endereço Bitcoin inválido ou por parâmetros URI malformados.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid VeriCoin address or malformed URI parameters.</source>
+        <translation>URI não foi lido correctamente! Isto pode ser causado por um endereço VeriCoin inválido ou por parâmetros URI malformados.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1334,8 +1334,8 @@
         <translation>Quantia</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Entre um endereço Bitcoin (ex. %1)</translation>
+        <source>Enter a VeriCoin address (e.g. %1)</source>
+        <translation>Entre um endereço VeriCoin (ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1556,8 +1556,8 @@
         <translation>Limpar consola</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin Core RPC console.</source>
-        <translation>Bem-vindo à consola RPC do Bitcoin Core.</translation>
+        <source>Welcome to the VeriCoin Core RPC console.</source>
+        <translation>Bem-vindo à consola RPC do VeriCoin Core.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1631,8 +1631,8 @@
         <translation>Reutilizar um endereço de receção existente (não recomendado)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation>Uma mensagem opcional para anexar ao pedido de pagamento, que será exibida quando o pedido for aberto. Nota: A mensagem não será enviada com o pagamento através da rede Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the VeriCoin network.</source>
+        <translation>Uma mensagem opcional para anexar ao pedido de pagamento, que será exibida quando o pedido for aberto. Nota: A mensagem não será enviada com o pagamento através da rede VeriCoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2004,8 +2004,8 @@
         <translation>Pagar somente a taxa minima de %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation>Aviso: Endereço Bitcoin inválido</translation>
+        <source>Warning: Invalid VeriCoin address</source>
+        <translation>Aviso: Endereço VeriCoin inválido</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2055,8 +2055,8 @@
         <translation>Este é um pagamento normal.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation>O endereço Bitcoin para enviar o pagamento</translation>
+        <source>The VeriCoin address to send the payment to</source>
+        <translation>O endereço VeriCoin para enviar o pagamento</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2083,8 +2083,8 @@
         <translation>Introduza um rótulo para este endereço para o adicionar à sua lista de endereços usados</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Uma mensagem que estava anexada ao URI bitcoin: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede Bitcoin.</translation>
+        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the VeriCoin network.</source>
+        <translation>Uma mensagem que estava anexada ao URI bitcoin: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede VeriCoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2098,8 +2098,8 @@
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>O Bitcoin Core está a encerrar...</translation>
+        <source>VeriCoin Core is shutting down...</source>
+        <translation>O VeriCoin Core está a encerrar...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2117,8 +2117,8 @@
         <translation>&amp;Assinar Mensagem</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation>O endereço Bitcoin para designar a mensagem</translation>
+        <source>The VeriCoin address to sign the message with</source>
+        <translation>O endereço VeriCoin para designar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2149,8 +2149,8 @@
         <translation>Copiar a assinatura actual para a área de transferência</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Assine uma mensagem para provar que é dono deste endereço Bitcoin</translation>
+        <source>Sign the message to prove you own this VeriCoin address</source>
+        <translation>Assine uma mensagem para provar que é dono deste endereço VeriCoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2169,12 +2169,12 @@
         <translation>&amp;Verificar Mensagem</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation>O endereço Bitcoin com que a mensagem foi designada</translation>
+        <source>The VeriCoin address the message was signed with</source>
+        <translation>O endereço VeriCoin com que a mensagem foi designada</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Verifique a mensagem para assegurar que foi assinada com o endereço Bitcoin especificado</translation>
+        <source>Verify the message to ensure it was signed with the specified VeriCoin address</source>
+        <translation>Verifique a mensagem para assegurar que foi assinada com o endereço VeriCoin especificado</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2240,12 +2240,12 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>VeriCoin Core</source>
+        <translation>VeriCoin Core</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Os programadores do Bitcoin Core</translation>
+        <source>The VeriCoin Core developers</source>
+        <translation>Os programadores do VeriCoin Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2782,8 +2782,8 @@
         <translation>Esta é uma versão de testes pré-lançamento - use à sua responsabilidade - não usar para minar ou aplicações comerciais</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>Incapaz de vincular à porta %s neste computador. O Bitcoin Core provavelmente já está a correr.</translation>
+        <source>Unable to bind to %s on this computer. VeriCoin Core is probably already running.</source>
+        <translation>Incapaz de vincular à porta %s neste computador. O VeriCoin Core provavelmente já está a correr.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -2958,8 +2958,8 @@
         <translation>Vinculado para dar o endereço para atender as ligações JSON-RPC. Use [host]: Notação de porta para IPv6. Esta opção pode ser especificada várias vezes (padrão: ligam-se a todas as interfaces)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>Impossível trancar a pasta de dados %s. Provavelmente o Bitcoin Core já está a ser executado.</translation>
+        <source>Cannot obtain a lock on data directory %s. VeriCoin Core is probably already running.</source>
+        <translation>Impossível trancar a pasta de dados %s. Provavelmente o VeriCoin Core já está a ser executado.</translation>
     </message>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
@@ -2970,8 +2970,8 @@
         <translation>Definir tamanho máximo de transações com alta-prioridade/baixa-taxa em bytes (por defeito: %d)</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Core will not work properly.</source>
-        <translation>Atenção: Por favor verifique que a data e hora do seu computador estão correctas! Se o seu relógio não estiver certo o Bitcoin Core não irá funcionar correctamente.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong VeriCoin Core will not work properly.</source>
+        <translation>Atenção: Por favor verifique que a data e hora do seu computador estão correctas! Se o seu relógio não estiver certo o VeriCoin Core não irá funcionar correctamente.</translation>
     </message>
     <message>
         <source>(default: %u)</source>
@@ -2982,12 +2982,12 @@
         <translation>Escolha a pasta de dados ao iniciar (por defeito: 0)</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Os Programadores do Bitcoin Core</translation>
+        <source>Copyright (C) 2009-%i The VeriCoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Os Programadores do VeriCoin Core</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Core</source>
-        <translation>Erro ao carregar wallet.dat: A Carteira requer uma versão mais recente do Bitcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of VeriCoin Core</source>
+        <translation>Erro ao carregar wallet.dat: A Carteira requer uma versão mais recente do VeriCoin Core</translation>
     </message>
     <message>
         <source>Information</source>
@@ -3050,8 +3050,8 @@
         <translation>Nome de utilizador para ligações JSON-RPC</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Core to complete</source>
-        <translation>A Carteira precisou de ser reescrita: reinicie o Bitcoin Core para completar o processo</translation>
+        <source>Wallet needed to be rewritten: restart VeriCoin Core to complete</source>
+        <translation>A Carteira precisou de ser reescrita: reinicie o VeriCoin Core para completar o processo</translation>
     </message>
     <message>
         <source>Warning</source>

@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-# Copyright (c) 2014 The Bitcoin Core developers
+# Copyright (c) 2014 The VeriCoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 # Test REST interface
 #
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import VeriCoinTestFramework
 from test_framework.util import *
 import base64
 
@@ -20,7 +20,7 @@ try:
 except ImportError:
     import urlparse
 
-class HTTPBasicsTest (BitcoinTestFramework):        
+class HTTPBasicsTest (VeriCoinTestFramework):        
     def setup_nodes(self):
         return start_nodes(4, self.options.tmpdir, extra_args=[['-rpckeepalive=1'], ['-rpckeepalive=0'], [], []])
 

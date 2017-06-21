@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2013 The Bitcoin Core developers
+// Copyright (c) 2011-2013 The VeriCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -25,7 +25,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate(): QAbstractItemDelegate(), unit(BitcoinUnits::BTC)
+    TxViewDelegate(): QAbstractItemDelegate(), unit(VeriCoinUnits::BTC)
     {
 
     }
@@ -82,7 +82,7 @@ public:
             foreground = option.palette.color(QPalette::Text);
         }
         painter->setPen(foreground);
-        QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true, BitcoinUnits::separatorAlways);
+        QString amountText = VeriCoinUnits::formatWithUnit(unit, amount, true, VeriCoinUnits::separatorAlways);
         if(!confirmed)
         {
             amountText = QString("[") + amountText + QString("]");
@@ -159,14 +159,14 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     currentWatchOnlyBalance = watchOnlyBalance;
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
-    ui->labelBalance->setText(BitcoinUnits::formatWithUnit(unit, balance, false, BitcoinUnits::separatorAlways));
-    ui->labelUnconfirmed->setText(BitcoinUnits::formatWithUnit(unit, unconfirmedBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelImmature->setText(BitcoinUnits::formatWithUnit(unit, immatureBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelTotal->setText(BitcoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + immatureBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelWatchAvailable->setText(BitcoinUnits::formatWithUnit(unit, watchOnlyBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelWatchPending->setText(BitcoinUnits::formatWithUnit(unit, watchUnconfBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelWatchImmature->setText(BitcoinUnits::formatWithUnit(unit, watchImmatureBalance, false, BitcoinUnits::separatorAlways));
-    ui->labelWatchTotal->setText(BitcoinUnits::formatWithUnit(unit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, BitcoinUnits::separatorAlways));
+    ui->labelBalance->setText(VeriCoinUnits::formatWithUnit(unit, balance, false, VeriCoinUnits::separatorAlways));
+    ui->labelUnconfirmed->setText(VeriCoinUnits::formatWithUnit(unit, unconfirmedBalance, false, VeriCoinUnits::separatorAlways));
+    ui->labelImmature->setText(VeriCoinUnits::formatWithUnit(unit, immatureBalance, false, VeriCoinUnits::separatorAlways));
+    ui->labelTotal->setText(VeriCoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + immatureBalance, false, VeriCoinUnits::separatorAlways));
+    ui->labelWatchAvailable->setText(VeriCoinUnits::formatWithUnit(unit, watchOnlyBalance, false, VeriCoinUnits::separatorAlways));
+    ui->labelWatchPending->setText(VeriCoinUnits::formatWithUnit(unit, watchUnconfBalance, false, VeriCoinUnits::separatorAlways));
+    ui->labelWatchImmature->setText(VeriCoinUnits::formatWithUnit(unit, watchImmatureBalance, false, VeriCoinUnits::separatorAlways));
+    ui->labelWatchTotal->setText(VeriCoinUnits::formatWithUnit(unit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, VeriCoinUnits::separatorAlways));
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users

@@ -1,4 +1,4 @@
-// Copyright (c) 2009-2014 The Bitcoin Core developers
+// Copyright (c) 2009-2014 The VeriCoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -44,7 +44,7 @@ static bool AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = _("Bitcoin Core bitcoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("VeriCoin Core bitcoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
               "  bitcoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded bitcoin transaction") + "\n" +
               "  bitcoin-tx [options] -create [commands]   " + _("Create hex-encoded bitcoin transaction") + "\n" +
@@ -67,6 +67,7 @@ static bool AppInitRawTx(int argc, char* argv[])
         strUsage += HelpMessageOpt("delout=N", _("Delete output N from TX"));
         strUsage += HelpMessageOpt("in=TXID:VOUT", _("Add input to TX"));
         strUsage += HelpMessageOpt("locktime=N", _("Set TX lock time to N"));
+        strUsage += HelpMessageOpt("time=N", _("Set TX time to N"));
         strUsage += HelpMessageOpt("nversion=N", _("Set TX version to N"));
         strUsage += HelpMessageOpt("outaddr=VALUE:ADDRESS", _("Add address-based output to TX"));
         strUsage += HelpMessageOpt("outscript=VALUE:SCRIPT", _("Add raw script output to TX"));
@@ -172,6 +173,15 @@ static void MutateTxLocktime(CMutableTransaction& tx, const string& cmdVal)
     tx.nLockTime = (unsigned int) newLocktime;
 }
 
+static void MutateTxTime(CMutableTransaction& tx, const string& cmdVal)
+{
+    int64_t newTime = atoi64(cmdVal);
+    if (newTime < 0LL || newTime > 0xffffffffLL)
+        throw runtime_error("Invalid TX time requested");
+
+    tx.nTime = (unsigned int) newTime;
+}
+
 static void MutateTxAddInput(CMutableTransaction& tx, const string& strInput)
 {
     // separate TXID:VOUT in string
@@ -218,7 +228,7 @@ static void MutateTxAddOutAddr(CMutableTransaction& tx, const string& strInput)
 
     // extract and validate ADDRESS
     string strAddr = strInput.substr(pos + 1, string::npos);
-    CBitcoinAddress addr(strAddr);
+    CVeriCoinAddress addr(strAddr);
     if (!addr.IsValid())
         throw runtime_error("invalid TX output address");
 
@@ -350,7 +360,7 @@ static void MutateTxSign(CMutableTransaction& tx, const string& flagStr)
     for (unsigned int kidx = 0; kidx < keysObj.count(); kidx++) {
         if (!keysObj[kidx].isStr())
             throw runtime_error("privatekey not a string");
-        CBitcoinSecret vchSecret;
+        CVeriCoinSecret vchSecret;
         bool fGood = vchSecret.SetString(keysObj[kidx].getValStr());
         if (!fGood)
             throw runtime_error("privatekey not valid");
@@ -459,6 +469,8 @@ static void MutateTx(CMutableTransaction& tx, const string& command,
         MutateTxVersion(tx, commandVal);
     else if (command == "locktime")
         MutateTxLocktime(tx, commandVal);
+    else if (command == "time")
+        MutateTxTime(tx, commandVal);
 
     else if (command == "delin")
         MutateTxDelInput(tx, commandVal);

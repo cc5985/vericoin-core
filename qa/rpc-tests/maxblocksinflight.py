@@ -5,7 +5,7 @@
 #
 
 from test_framework.mininode import *
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import VeriCoinTestFramework
 from test_framework.util import *
 import logging
 
@@ -76,7 +76,7 @@ class TestManager(NodeConnCB):
         self.connection.disconnect_node()
 
         
-class MaxBlocksInFlightTest(BitcoinTestFramework):
+class MaxBlocksInFlightTest(VeriCoinTestFramework):
     def add_options(self, parser):
         parser.add_option("--testbinary", dest="testbinary",
                           default=os.getenv("BITCOIND", "bitcoind"),

@@ -39,13 +39,9 @@ public:
         consensus.posLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.posLimitV2 = uint256S("000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nTargetTimespan = 16 * 60; // 16 mins
-        consensus.nTargetSpacingV1 = 60;
-        consensus.nTargetSpacing = 64;
+        consensus.nTargetSpacing = 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
-        consensus.nProtocolV1RetargetingFixedTime = 1395631999;
-        consensus.nProtocolV2Time = 1407053625;
-        consensus.nProtocolV3Time = 1444028400;
-        consensus.nLastPOWBlock = 10000;
+        consensus.nLastPOWBlock = 20160;
         consensus.nStakeTimestampMask = 0xf;
         /** 
          * The message start string is designed to be unlikely to occur in normal data.
@@ -56,26 +52,25 @@ public:
         pchMessageStart[1] = 0x35;
         pchMessageStart[2] = 0x22;
         pchMessageStart[3] = 0x05;
-        vAlertPubKey = ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284");
-        nDefaultPort = 15714;
+        vAlertPubKey = ParseHex("047eba500c7134efcaf721e9f438f25b948ceaa5f059b877b3a64f6fa2cf0ea6f41091bd9b1ff9448727db97e4ad44d49496dc41949c677c49fe632d1d7996a515");
+        nDefaultPort = 58684;
         nMinerThreads = 0;
         nMaxTipAge = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 
-        /**
-         * Build the genesis block. Note that the output of its generation
-         * transaction cannot be spent since it did not originally exist in the
-         * database.
-         *
-         * CBlock(hash=000001faef25dec4fbcf906e6242621df2c183bf232f263d0ba5b101911e4563, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=12630d16a97f24b287c8c2594dda5fb98c9e6c70fc61d44191931ea2aa08dc90, nTime=1393221600, nBits=1e0fffff, nNonce=164482, vtx=1, vchBlockSig=)
-         *   Coinbase(hash=12630d16a9, ver=1, nTime=1393221600, vin.size=1, vout.size=1, nLockTime=0)
-         *     CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a24323020466562203230313420426974636f696e2041544d7320636f6d6520746f20555341)
-         *     CTxOut(empty)
-         *   vMerkleTree: 12630d16a9
-         */
-        const char* pszTimestamp = "20 Feb 2014 VeriCoin ATMs come to USA";
+        // Genesis block
+
+        // MainNet:
+
+        // CBlock(hash=34125fc48033d7284178f16d16c0851e1cd75906e65b499cca66e5407c60ae65, ver=1, hashPrevBlock=0000000000000000000000000000000000000000000000000000000000000000, hashMerkleRoot=60424046d38de827de0ed1a20a351aa7f3557e3e1d3df6bfb34a94bc6161ec68, nTime=1399690945, nBits=1e0fffff, nNonce=222826, vtx=1, vchBlockSig=)
+        // Coinbase(hash=60424046d3, nTime=1399690945, ver=1, vin.size=1, vout.size=1, nLockTime=0)
+        //  CTxIn(COutPoint(0000000000, 4294967295), coinbase 00012a3639204d6179203230313420555320706f6c6974696369616e732063616e2061636365707420626974636f696e20646f6e6174696f6e73)
+        //  CTxOut(empty)
+        // vMerkleTree: 60424046d3
+
+        const char* pszTimestamp = "9 May 2014 US politicians can accept bitcoin donations";
         CMutableTransaction txNew;
-        txNew.nTime = 1393221600;
+        txNew.nTime = 1399690945;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CScriptNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -84,20 +79,19 @@ public:
         genesis.hashPrevBlock.SetNull();
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1393221600;
+        genesis.nTime    = 1399690945;
         genesis.nBits    = 0x1e0fffff;
-        genesis.nNonce   = 164482;
+        genesis.nNonce   = 612416;
 
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x000001faef25dec4fbcf906e6242621df2c183bf232f263d0ba5b101911e4563"));
-        assert(genesis.hashMerkleRoot == uint256S("0x12630d16a97f24b287c8c2594dda5fb98c9e6c70fc61d44191931ea2aa08dc90"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000004da58a02be894a6c916d349fe23cc29e21972cafb86b5d3f07c4b8e6bb8"));
+        assert(genesis.hashMerkleRoot == uint256S("0x60424046d38de827de0ed1a20a351aa7f3557e3e1d3df6bfb34a94bc6161ec68"));
 
-        vSeeds.push_back(CDNSSeedData("rat4.vericoin.co", "seed.vericoin.co"));
-        vSeeds.push_back(CDNSSeedData("syllabear.tk", "bcseed.syllabear.tk"));
+        vSeeds.push_back(CDNSSeedData("dnsseed-vericoin", "dnsseed.vericoin.info"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,25);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,85);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,153);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,70);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,132);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,198);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
@@ -112,13 +106,33 @@ public:
 
         checkpointData = (Checkpoints::CCheckpointData) {
             boost::assign::map_list_of
-            (  5001, uint256S("0x2fac9021be0c311e7b6dc0933a72047c70f817e2eb1e01bede011193ad1b28bc"))  // hardfork
-            ( 10000, uint256S("0x0000000000827e4dc601f7310a91c45af8df0dfc1b6fa1dfa5b896cb00c8767c"))  // last pow block
-            ( 38425, uint256S("0x62bf2e9701226d2f88d9fa99d650bd81f3faf2e56f305b7d71ccd1e7aa9c3075"))  // hardfork
-            (254348, uint256S("0x9bf8d9bd757d3ef23d5906d70567e5f0da93f1e0376588c8d421a95e2421838b"))  // minor network split
-            (319002, uint256S("0x0011494d03b2cdf1ecfc8b0818f1e0ef7ee1d9e9b3d1279c10d35456bc3899ef"))  // hardfork
-            (872456, uint256S("0xe4fd321ced1de06213d2e246b150b4bfd8c4aa0989965dce88f2a58668c64860")), // hardfork
-            1444028528, // * UNIX timestamp of last checkpoint block
+            ( 2700,    uint256S("0x52f0119bd2252422ea4aebb25273a98155972cf25a6ef267a7ef35103b5466c3") )
+            ( 5700,    uint256S("0x000000001c3865f29140f49217c99ad985e80e89ca4d1e6a518a47f6961d6f16") )
+            ( 10080,   uint256S("0x00000000023212158c4a50727711ffc9ddbcb246e7c34e8a6668c49aad3b5390") )
+            ( 16346,   uint256S("0x0000000002963467ff7c61f53f2a141819e8dcd04b5320e1e78f50d52e4d312e") )
+            ( 24533,   uint256S("0xccec1c9940fcc78e95ecb75213469a8220280e23bab4976d2132e0b5513798cb") )
+            ( 26196,   uint256S("0x84d6eac78587fad5c11a0475ee6085bbff505e3d3be78734c6be2908c5154849") )
+            ( 27159,   uint256S("0x9bad4fb0cdc3a774981d53eef6fda7fb3fe720b2f847dbb9b6eafba72f535571") )
+            ( 107670,  uint256S("0xcbe5acc625d669c603943daa26e7bac3fcacb8f95d4a8fa2b00092ad22407a1a") )
+            ( 107671,  uint256S("0x61d59bbc7cbced427d0c4c6d779c1a7ad327bf788890b2cf4d3e2abdf11979e6") )
+            ( 107672,  uint256S("0x704197d86f68ec75a3a15e32ad6dc1a956400671a88eb2926e9bb78136cc8e0b") )
+            ( 107699,  uint256S("0xd4f67d88408ce3c268dc35478b10821f0bb787a7d131bdb57e94bd5c1b02078d") )
+            ( 107700,  uint256S("0x426cf03d395d0578d943a16e2dade3ae791d3d8759395fea99a98db62a778037") )
+            ( 107720,  uint256S("0x32d622ffeac54b872a04fb18df90807cb11e28452597acd410237ee05c89fb45") )
+            ( 107738,  uint256S("0xf0d742fd0a1aeaadf432f8af19276d5ecbb07a0706284d6cc0a70fb270a3d697") )
+            ( 130932,  uint256S("0xdced5f5ee627cb8af12c3439eb7e7f049f83235459377bf5981e8b906e1a945f") )
+            ( 137725,  uint256S("0xce241207536b7eada68b247edcfc1240e46dbf216385f102ade02645be07f6ef") )
+            ( 239355,  uint256S("0xe662449e6b86f473777749add48c2b6d33900227d4c283a9366d845a4dd92a71") )
+            ( 239526,  uint256S("0x4d07e6a7b3b1fda725d1e113eb2f04b188286a053b04833431ee81373de1ff58") )
+            ( 241527,  uint256S("0x80afc89cbee28cfc516b9c88c9d74446caa9a284bdcbe4e1655abd911044ac71") )
+            ( 242108,  uint256S("0x5fd020de15dff256b9136b9c874d11e2db25d960a546606c8d936afcefd2516a") )
+            ( 295000,  uint256S("0xc441ac33032db312b6fd7e62fe9774ad4f9d8d23c61c2047734b71667319999c") )
+            ( 914000,  uint256S("0xdeb31aa6af3b8d4e370faab196bbc8701146b900b93102ef432b23cd1d23dcb6") )
+            ( 1417780, uint256S("0xa5a4ae40a0f1c0a3517dc5e2e60a3020247c0f9878b40720099477609635a652") )
+            ( 1417877, uint256S("0x3c509ffd917975972001651a1cf666bb18112d9e31e4f484c2b2d922779e0755") )
+            ( 1418062, uint256S("0xf529c1f076221cc45e6c1f2003f4e1813330587597184444b43cc74042d241eb") )
+            ( 1418635, uint256S("0xde3adb390cd9a95bcec4a2e40b74821f364c6f8a71728f37f4249155cd92dabc") ),
+            1476866612, // * UNIX timestamp of last checkpoint block
             2774767,    // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             3500.0      // * estimated number of transactions per day after checkpoint
@@ -179,7 +193,7 @@ public:
 
         checkpointData = (Checkpoints::CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x0000724595fb3b9609d441cbfb9577615c292abf07d996d3edabc48de843642d")),
+            ( 0, uint256S("0x000004da58a02be894a6c916d349fe23cc29e21972cafb86b5d3f07c4b8e6bb8")),
             0,
             0,
             0
@@ -226,7 +240,7 @@ public:
 
         checkpointData = (Checkpoints::CCheckpointData){
             boost::assign::map_list_of
-            ( 0, uint256S("0x523dda6d336047722cbaf1c5dce622298af791bac21b33bf6e2d5048b2a13e3d")),
+            ( 0, uint256S("0x0000d90349e5898a5cb76775e93f8774138d48cd2d763c7707ce87d42af0f66a")),
             0,
             0,
             0

@@ -87,7 +87,7 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000004da58a02be894a6c916d349fe23cc29e21972cafb86b5d3f07c4b8e6bb8"));
         assert(genesis.hashMerkleRoot == uint256S("0x60424046d38de827de0ed1a20a351aa7f3557e3e1d3df6bfb34a94bc6161ec68"));
 
-        vSeeds.push_back(CDNSSeedData("dnsseed-vericoin", "dnsseed.vericoin.info"));
+        vSeeds.push_back(CDNSSeedData("vericoin.info", "dnsseed.vericoin.info"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,70);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,132);
@@ -153,25 +153,22 @@ public:
         consensus.nMajorityWindow = 100;
         consensus.powLimit = uint256S("0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.fPowAllowMinDifficultyBlocks = true;
-        consensus.nProtocolV1RetargetingFixedTime = 0;
-        consensus.nProtocolV2Time = 0;
-        consensus.nProtocolV3Time = 0;
-        consensus.nLastPOWBlock = 0x7fffffff;
+        consensus.nLastPOWBlock = 20160;
         pchMessageStart[0] = 0xcd;
         pchMessageStart[1] = 0xf2;
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xef;
         vAlertPubKey = ParseHex("0471dc165db490094d35cde15b1f5d755fa6ad6f2b5ed0f340e3f17f57389c3c2af113a8cbcc885bde73305a553b5640c83021128008ddf882e856336269080496");
-        nDefaultPort = 25714;
+        nDefaultPort = 48684;
         nMinerThreads = 0;
         nMaxTipAge = 0x7fffffff;
         nPruneAfterHeight = 1000;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nBits  = 0x1f00ffff;
-        genesis.nNonce = 216178;
+        genesis.nNonce = 712750;
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000724595fb3b9609d441cbfb9577615c292abf07d996d3edabc48de843642d"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000d90349e5898a5cb76775e93f8774138d48cd2d763c7707ce87d42af0f66a"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -193,7 +190,7 @@ public:
 
         checkpointData = (Checkpoints::CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0x000004da58a02be894a6c916d349fe23cc29e21972cafb86b5d3f07c4b8e6bb8")),
+            ( 0, uint256S("0x0000d90349e5898a5cb76775e93f8774138d48cd2d763c7707ce87d42af0f66a")),
             0,
             0,
             0
@@ -224,8 +221,8 @@ public:
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 2;
         consensus.hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 18444;
-        assert(consensus.hashGenesisBlock == uint256S("0x523dda6d336047722cbaf1c5dce622298af791bac21b33bf6e2d5048b2a13e3d"));
+        nDefaultPort = 48684;
+        assert(consensus.hashGenesisBlock == uint256S("0x0000d90349e5898a5cb76775e93f8774138d48cd2d763c7707ce87d42af0f66a"));
         nPruneAfterHeight = 1000;
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
